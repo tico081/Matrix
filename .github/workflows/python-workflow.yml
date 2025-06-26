@@ -10,13 +10,13 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest, windows-latest]
-        version: ["3.10", "3.9", "3.8", "3.7"]
+        version: ["3.12.6", "3.12.7", "3.12.8", "3.13"]
         include:
         - platform: ubuntu-latest
-          version: "3.6"
+          version: "3.13.2"
         exclude:
         - platform: windows-latest
-          version: "3.10"
+          version: "3.12.6"
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
